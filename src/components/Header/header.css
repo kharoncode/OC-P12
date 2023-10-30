@@ -1,0 +1,26 @@
+header {
+   padding: 0 90px 0 30px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: black;
+   color: white;
+}
+
+header .logo {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 10px;
+}
+
+header .logo span {
+   color: red;
+   font-size: 1.5em;
+}
+
+header .link {
+   font-size: 1.5em;
+   font-weight: 500;
+   color: white;
+}
