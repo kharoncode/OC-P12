@@ -1,8 +1,8 @@
 nav {
-   position: relative;
+   padding: 60px 0 60px 0;
    display: flex;
    align-items: center;
-   justify-content: center;
+   justify-content: space-around;
    flex-direction: column;
    width: 117px;
    height: 100%;
@@ -17,11 +17,9 @@ nav .menu {
 }
 
 nav .copiryght {
-   position: absolute;
-   width: 150px;
-   bottom: 100px;
    font-size: 0.75em;
    font-weight: 500;
-   transform: rotate(-90deg);
-   color: white;
+   writing-mode: vertical-rl;
+   transform: rotate(180deg);
+   color: rgb(255, 255, 255);
 }
