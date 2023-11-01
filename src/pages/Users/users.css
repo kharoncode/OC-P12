@@ -1,0 +1,23 @@
+.us-container {
+   width: 300px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+}
+
+.us-container-link-container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   gap: 30px;
+}
+
+.us-container a {
+   background: var(--primary);
+   color: var(--tertiary);
+   padding: 5px;
+   border-radius: 5px;
+   font-size: 1.2em;
+   font-weight: 500;
+}

@@ -1,10 +1,11 @@
 header {
    padding: 0 90px 0 30px;
+   height: 90px;
    display: flex;
    justify-content: space-between;
    align-items: center;
-   background-color: black;
-   color: white;
+   background-color: var(--secondary);
+   color: var(--tertiary);
 }
 
 header .logo {
@@ -15,12 +16,12 @@ header .logo {
 }
 
 header .logo span {
-   color: red;
+   color: var(--primary);
    font-size: 1.5em;
 }
 
 header .link {
    font-size: 1.5em;
    font-weight: 500;
-   color: white;
+   color: var(--tertiary);
 }

@@ -10,19 +10,21 @@ function App() {
    return (
       <Router>
          <Header userId={`${userId}`} />
-         <main>
+         <div className="main-container">
             <Nav userId={`${userId}`} />
-            <Routes>
-               <Route
-                  path="/"
-                  element={<Users userId={userId} setUserId={setUserId} />}
-               />
-               <Route path="/:userId/" element={<Home />} />
-               <Route path="/:userId/profil" element={<Home />} />
-               <Route path="/:userId/settings" element={<Home />} />
-               <Route path="/:userId/community" element={<Home />} />
-            </Routes>
-         </main>
+            <main>
+               <Routes>
+                  <Route
+                     path="/"
+                     element={<Users userId={userId} setUserId={setUserId} />}
+                  />
+                  <Route path="/:userId/" element={<Home />} />
+                  <Route path="/:userId/profil" element={<Home />} />
+                  <Route path="/:userId/settings" element={<Home />} />
+                  <Route path="/:userId/community" element={<Home />} />
+               </Routes>
+            </main>
+         </div>
       </Router>
    );
 }

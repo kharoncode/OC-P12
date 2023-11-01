@@ -1,3 +1,9 @@
+:root {
+   --primary: #e60000;
+   --secondary: #000000;
+   --tertiary: #ffffff;
+}
+
 * {
    box-sizing: border-box;
    padding: 0;
@@ -23,6 +29,17 @@ ul {
    list-style-type: none;
 }
 
-main {
+.center {
    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.main-container {
+   display: flex;
+}
+
+main {
+   width: 100%;
+   padding: 60px 80px 60px 80px;
 }

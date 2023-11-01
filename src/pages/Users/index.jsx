@@ -1,10 +1,12 @@
+import './users.css';
+
 import { Link } from 'react-router-dom';
 
 function Users({ userId, setUserId }) {
    return (
-      <div>
+      <div className="us-container">
          <div>Selectionnez un utilisateur</div>
-         <div>
+         <div className="us-container-link-container">
             <Link
                to="/12/"
                key="12"
