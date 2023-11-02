@@ -1,13 +1,11 @@
-//import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './nav.css';
-import yoga from '../../assets/yoga.svg';
-import swim from '../../assets/swim.svg';
-import bike from '../../assets/bike.svg';
-import fitness from '../../assets/fitness.svg';
+import yoga from '../../assets/nav/yoga.svg';
+import swim from '../../assets/nav/swim.svg';
+import bike from '../../assets/nav/bike.svg';
+import fitness from '../../assets/nav/fitness.svg';
 
-function Nav(userId) {
-   //const { userId } = useParams();
+function Nav({ userId }) {
    return (
       <nav>
          <div className="menu">

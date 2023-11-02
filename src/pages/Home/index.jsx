@@ -1,5 +1,5 @@
 import { useFetch } from '../../utils/hooks';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import './home.css';
 import Activity from '../../components/Activity';
 import AverageSession from '../../components/AverageSessions';
@@ -13,27 +13,31 @@ function Home() {
       `http://localhost:3001/user/${userId}`
    );
    if (error) {
-      return <div>Oups ... il y a une erreure !</div>;
+      return <div>Oups ... il y a une erreur !</div>;
    }
    if (!isLoading) {
       const user = data.data;
-      return (
-         <div className="dashboard">
-            <div className="title">
-               <div className="hello">
-                  Bonjour <span>{user.userInfos.firstName}</span>
+      if (user !== undefined) {
+         return (
+            <div className="dashboard">
+               <div className="title">
+                  <div className="hello">
+                     Bonjour <span>{user.userInfos.firstName}</span>
+                  </div>
+                  <div className="congratulations">
+                     Félicitation ! Vous avez explosé vos objectifs hier 👏
+                  </div>
                </div>
-               <div className="congratulations">
-                  Félicitation ! Vous avez explosé vos objectifs hier 👏
-               </div>
+               <Stats stats={user.keyData} />
+               <Activity userId={userId} />
+               <AverageSession userId={userId} />
+               <Performance userId={userId} />
+               <Score score={user.score ? user.score : user.todayScore} />
             </div>
-            <Stats />
-            <Activity />
-            <AverageSession />
-            <Performance />
-            <Score />
-         </div>
-      );
+         );
+      } else {
+         return <Navigate to="/" />;
+      }
    }
 }
 

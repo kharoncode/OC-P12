@@ -1,0 +1,23 @@
+.stats-item {
+   height: 60px;
+   gap: 15px;
+}
+
+.stats-item-info {
+   padding: 5px;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.stats-item-info--value {
+   font-size: 1.25em;
+   font-weight: 700;
+}
+
+.stats-item-info--name {
+   font-size: 0.875em;
+   font-weight: 500;
+   color: #74798c;
+}
