@@ -25,7 +25,7 @@ function Home() {
                      Bonjour <span>{user.userInfos.firstName}</span>
                   </div>
                   <div className="congratulations">
-                     Félicitation ! Vous avez explosé vos objectifs hier 👏
+                     Félicitations ! Vous avez explosé vos objectifs hier 👏
                   </div>
                </div>
                <Stats stats={user.keyData} />
