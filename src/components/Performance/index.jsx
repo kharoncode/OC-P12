@@ -10,18 +10,22 @@ function Performance({ userId }) {
       return <div>Oups ... il y a une erreure !</div>;
    }
    if (!isLoading) {
-      const performance = data.data;
+      const kind = data.data.kind;
+      const performance = data.data.data.map((el) => {
+         return { value: el.value, kind: kind[el.kind] };
+      });
+
       return (
-         <div className="performance-container">
+         <div className="performance-container center">
             <RadarChart
-               cx={150}
-               cy={150}
-               outerRadius={120}
-               width={300}
-               height={300}
-               data={performance.data}
+               cx="50%"
+               cy="50%"
+               outerRadius="70%"
+               width={260}
+               height={260}
+               data={performance}
             >
-               <PolarGrid />
+               <PolarGrid radialLines={false} />
                <PolarAngleAxis dataKey="kind" />
                <Radar
                   name="Mike"
