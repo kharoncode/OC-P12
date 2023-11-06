@@ -1,3 +1,40 @@
 .score-container {
-   background-color: aquamarine;
+   position: relative;
+   background-color: #fafafa;
+   box-shadow: 0px 2px 4px 0px #00000005;
+   border-radius: 5px;
+   height: 263px;
+}
+
+.score-title {
+   position: absolute;
+   top: 25px;
+   left: 30px;
+   font-size: 0.9375;
+   font-weight: 500;
+}
+
+.score-info {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   background: var(--tertiary);
+   border-radius: 50%;
+   width: 150px;
+   height: 150px;
+}
+
+.score-info--result {
+   font-size: 1.625em;
+   font-weight: 700;
+   color: #282d30;
+}
+
+.score-info--text {
+   text-align: center;
+   width: 50%;
+   font-weight: 500;
+   color: #74798c;
 }

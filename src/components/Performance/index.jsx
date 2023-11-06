@@ -16,8 +16,7 @@ function Performance({ userId }) {
       return <div>Oups ... il y a une erreure !</div>;
    }
    if (!isLoading) {
-      const kind = data.data.kind;
-      const test = {
+      const kind = {
          1: 'Cardio',
          2: 'Energie',
          3: 'Endurance',
@@ -25,14 +24,13 @@ function Performance({ userId }) {
          5: 'Vitesse',
          6: 'Intensité',
       };
-      console.log(kind);
       const performance = data.data.data.map((el) => {
-         return { value: el.value, kind: test[el.kind] };
+         return { value: el.value, kind: kind[el.kind] };
       });
 
       return (
          <div className="performance-container center">
-            <ResponsiveContainer width={290} height={240}>
+            <ResponsiveContainer width={260} height={240}>
                <RadarChart
                   cx="50%"
                   cy="50%"
@@ -46,8 +44,9 @@ function Performance({ userId }) {
                   <PolarGrid radialLines={false} />
                   <PolarAngleAxis
                      dataKey="kind"
+                     dy={3}
                      tick={{
-                        fill: 'white',
+                        fill: 'var(--tertiary)',
                         fontSize: '0.75em',
                         fontWeight: 500,
                      }}

@@ -1,9 +1,20 @@
-.stats-item {
+.container {
+   padding: 30px;
+   background: #fafafa;
+   height: 124px;
+   width: 258px;
+   box-shadow: 0px 2px 4px 0px #00000005;
+   border-radius: 5px;
+}
+
+.infoContainer {
+   display: flex;
+   align-items: center;
    height: 60px;
    gap: 15px;
 }
 
-.stats-item-info {
+.stats {
    padding: 5px;
    height: 100%;
    display: flex;
@@ -11,12 +22,12 @@
    justify-content: space-between;
 }
 
-.stats-item-info--value {
+.statsValue {
    font-size: 1.25em;
    font-weight: 700;
 }
 
-.stats-item-info--name {
+.statsName {
    font-size: 0.875em;
    font-weight: 500;
    color: #74798c;
