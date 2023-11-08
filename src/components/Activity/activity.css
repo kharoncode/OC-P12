@@ -1,3 +1,63 @@
 .activity-container {
-   background-color: aquamarine;
+   position: relative;
+   background-color: #fbfbfb;
+}
+
+.activity-title {
+   position: absolute;
+   top: 25px;
+   left: 30px;
+   font-weight: 500;
+   color: #20253a;
+}
+
+.legend {
+   position: absolute;
+   top: 25px;
+   right: 30px;
+   display: flex;
+   gap: 30px;
+}
+
+.legend-item {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.legend-item p {
+   color: #74798c;
+   font-size: 0.875em;
+   font-weight: 500;
+}
+
+.circle {
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+}
+
+.weight-circle {
+   background: #282d30;
+}
+
+.calorie-circle {
+   background: var(--primary);
+}
+
+.custom-tooltip {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   gap: 1px;
+   width: 39px;
+   height: 63px;
+   background: var(--primary);
+}
+
+.custom-tooltip-label {
+   font-size: 0.4375em;
+   font-weight: 500;
+   color: var(--tertiary);
 }
