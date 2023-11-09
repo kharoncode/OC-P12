@@ -26,6 +26,13 @@ function Users({ userId, setUserId }) {
                18
             </Link>
          </div>
+         <div className="mockData-container">
+            <div>Mocked data ?</div>
+            <div className="mockData-inputs-container">
+               <input type="radio" />
+               <input type="radio" />
+            </div>
+         </div>
       </div>
    );
 }
