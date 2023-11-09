@@ -23,11 +23,11 @@ function Activity({ userId }) {
       const CustomTooltip = ({ active, payload, label }) => {
          if (active && payload && payload.length) {
             return (
-               <div className="custom-tooltip">
-                  <p className="custom-tooltip-label">
+               <div className="custom-tooltip-activity">
+                  <p className="custom-tooltip-activity-label">
                      {`${payload[0].value}`}kg
                   </p>
-                  <p className="custom-tooltip-label">
+                  <p className="custom-tooltip-activity-label">
                      {`${payload[1].value}`}Kcal
                   </p>
                </div>

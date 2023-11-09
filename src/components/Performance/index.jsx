@@ -16,7 +16,7 @@ function Performance({ userId }) {
       return <div>Oups ... il y a une erreure !</div>;
    }
    if (!isLoading) {
-      const kind = {
+      const category = {
          1: 'Cardio',
          2: 'Energie',
          3: 'Endurance',
@@ -24,9 +24,7 @@ function Performance({ userId }) {
          5: 'Vitesse',
          6: 'Intensité',
       };
-      const performance = data.data.data.map((el) => {
-         return { value: el.value, kind: kind[el.kind] };
-      });
+      const performance = data.data.data;
 
       return (
          <div className="performance-container center">
@@ -44,6 +42,7 @@ function Performance({ userId }) {
                   <PolarGrid radialLines={false} />
                   <PolarAngleAxis
                      dataKey="kind"
+                     tickFormatter={(kind) => category[kind]}
                      dy={3}
                      tick={{
                         fill: 'var(--tertiary)',

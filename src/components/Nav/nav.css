@@ -8,6 +8,7 @@ nav {
    height: 100%;
    position: fixed;
    background-color: var(--secondary);
+   z-index: 50;
 }
 
 nav .menu {
