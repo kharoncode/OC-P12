@@ -27,7 +27,7 @@ function AverageSessions({ userId }) {
          6: 'S',
          7: 'D',
       };
-      const CustomTooltip = ({ active, payload, label }) => {
+      const CustomTooltip = ({ active, payload }) => {
          if (active && payload && payload.length) {
             return (
                <div className="custom-tooltip-averageSessions">
