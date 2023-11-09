@@ -5,10 +5,7 @@ import {
    Line,
    XAxis,
    YAxis,
-   CartesianGrid,
    Tooltip,
-   Legend,
-   ReferenceLine,
    ResponsiveContainer,
 } from 'recharts';
 
@@ -45,6 +42,7 @@ function AverageSessions({ userId }) {
       };
       return (
          <div className="averageSessions-container center">
+            <h3 className="averageSessions-info">Durée moyenne des sessions</h3>
             <ResponsiveContainer width={260} height={240}>
                <LineChart data={averageSessions} margin={{ top: 60 }}>
                   <defs>
@@ -55,7 +53,7 @@ function AverageSessions({ userId }) {
                         x2="100%"
                         y2="0%"
                      >
-                        <stop offset="0%" stopColor="#FFFFFF33" />
+                        <stop offset="0%" stopColor="#FFFFFF60" />
                         <stop offset="100%" stopColor="var(--tertiary)" />
                      </linearGradient>
                   </defs>
@@ -78,7 +76,7 @@ function AverageSessions({ userId }) {
                   <YAxis
                      hide
                      type="number"
-                     domain={['dataMin - 10', 'dataMax + 10']}
+                     domain={['dataMin - 5', 'dataMax + 10']}
                   />
                   <Line
                      type="bump"

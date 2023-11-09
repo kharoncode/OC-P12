@@ -8,6 +8,18 @@
    width: 100%;
 }
 
+.averageSessions-info {
+   position: absolute;
+   width: 150px;
+   height: 50px;
+   top: 30px;
+   left: 35px;
+   font-size: 0.9375em;
+   font-weight: 500;
+   color: var(--tertiary);
+   opacity: 60%;
+}
+
 .custom-tooltip-averageSessions {
    display: flex;
    align-items: center;
