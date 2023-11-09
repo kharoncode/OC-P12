@@ -7,10 +7,11 @@ import Performance from '../../components/Performance';
 import Score from '../../components/Score';
 import Stats from '../../components/Stats';
 
-function Home() {
+function Home({ isMockedData }) {
    const { userId } = useParams();
    const { isLoading, data, error } = useFetch(
-      `http://localhost:3001/user/${userId}`
+      `http://localhost:3001/user/${userId}`,
+      isMockedData
    );
    if (error) {
       return <div>Oups ... il y a une erreur !</div>;
@@ -28,11 +29,14 @@ function Home() {
                      Félicitations ! Vous avez explosé vos objectifs hier 👏
                   </div>
                </div>
-               <Stats stats={user.keyData} />
-               <Activity userId={userId} />
-               <AverageSession userId={userId} />
-               <Performance userId={userId} />
-               <Score score={user.score ? user.score : user.todayScore} />
+               <Stats stats={user.keyData} isMockedData={isMockedData} />
+               <Activity userId={userId} isMockedData={isMockedData} />
+               <AverageSession userId={userId} isMockedData={isMockedData} />
+               <Performance userId={userId} isMockedData={isMockedData} />
+               <Score
+                  score={user.score ? user.score : user.todayScore}
+                  isMockedData={isMockedData}
+               />
             </div>
          );
       } else {

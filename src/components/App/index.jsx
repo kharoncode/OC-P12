@@ -8,6 +8,7 @@ import Dev from '../../components/Dev';
 
 function App() {
    const [userId, setUserId] = useState(0);
+   const [isMockedData, setIsMockedData] = useState(true);
    return (
       <Router>
          <Nav userId={`${userId}`} />
@@ -16,9 +17,17 @@ function App() {
             <Routes>
                <Route
                   path="/"
-                  element={<Users userId={userId} setUserId={setUserId} />}
+                  element={
+                     <Users
+                        setUserId={setUserId}
+                        setIsMockedData={setIsMockedData}
+                     />
+                  }
                />
-               <Route path="/:userId/" element={<Home />} />
+               <Route
+                  path="/:userId/"
+                  element={<Home isMockedData={isMockedData} />}
+               />
                <Route path="/:userId/profil" element={<Home />} />
                <Route path="/:userId/settings" element={<Home />} />
                <Route path="/:userId/community" element={<Home />} />

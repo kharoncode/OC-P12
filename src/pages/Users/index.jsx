@@ -2,7 +2,10 @@ import './users.css';
 
 import { Link } from 'react-router-dom';
 
-function Users({ userId, setUserId }) {
+function Users({ setUserId, setIsMockedData }) {
+   function test(e) {
+      setIsMockedData(e.target.value);
+   }
    return (
       <div className="us-container">
          <div>Selectionnez un utilisateur</div>
@@ -26,11 +29,22 @@ function Users({ userId, setUserId }) {
                18
             </Link>
          </div>
-         <div className="mockData-container">
-            <div>Mocked data ?</div>
-            <div className="mockData-inputs-container">
-               <input type="radio" />
-               <input type="radio" />
+         <div className="mockData-inputs-container" onChange={test}>
+            <legend>Mocked data ?</legend>
+            <div>
+               <input
+                  type="radio"
+                  id="yes"
+                  name="mockedData"
+                  value={true}
+                  defaultChecked
+               />
+               Oui
+            </div>
+
+            <div>
+               <input type="radio" id="no" name="mockedData" value={false} />
+               Non
             </div>
          </div>
       </div>
