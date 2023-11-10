@@ -43,7 +43,7 @@ function AverageSessions({ userId }) {
       return (
          <div className="averageSessions-container center">
             <h3 className="averageSessions-info">Durée moyenne des sessions</h3>
-            <ResponsiveContainer width={260} height={240}>
+            <ResponsiveContainer minWidth={260} width="99%" height={240}>
                <LineChart data={averageSessions} margin={{ top: 60 }}>
                   <defs>
                      <linearGradient

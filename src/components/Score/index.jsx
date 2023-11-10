@@ -21,7 +21,7 @@ function Score({ score }) {
             <div className="score-info--result">{score * 100}%</div>
             <div className="score-info--text">de votre objectif</div>
          </div>
-         <ResponsiveContainer width={260} height={240}>
+         <ResponsiveContainer minWidth={260} width="99%" height={240}>
             <RadialBarChart
                width={260}
                height={260}

@@ -28,7 +28,7 @@ function Performance({ userId }) {
 
       return (
          <div className="performance-container center">
-            <ResponsiveContainer width={260} height={240}>
+            <ResponsiveContainer minWidth={275} width="99%" height="100%">
                <RadarChart
                   cx="50%"
                   cy="50%"

@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 
-export function useFetch(url, isMockedData) {
+export function useFetch(url) {
    const [data, setData] = useState({});
    const [isLoading, setLoading] = useState(true);
    const [error, setError] = useState(null);
-   console.log(isMockedData);
 
    useEffect(() => {
       if (!url) {

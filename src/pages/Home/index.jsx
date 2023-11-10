@@ -29,14 +29,11 @@ function Home({ isMockedData }) {
                      Félicitations ! Vous avez explosé vos objectifs hier 👏
                   </div>
                </div>
-               <Stats stats={user.keyData} isMockedData={isMockedData} />
-               <Activity userId={userId} isMockedData={isMockedData} />
-               <AverageSession userId={userId} isMockedData={isMockedData} />
-               <Performance userId={userId} isMockedData={isMockedData} />
-               <Score
-                  score={user.score ? user.score : user.todayScore}
-                  isMockedData={isMockedData}
-               />
+               <Stats stats={user.keyData} />
+               <Activity userId={userId} />
+               <AverageSession userId={userId} />
+               <Performance userId={userId} />
+               <Score score={user.score ? user.score : user.todayScore} />
             </div>
          );
       } else {
