@@ -1,12 +1,13 @@
 import './activity.css';
 import {
-   BarChart,
    Bar,
    XAxis,
    YAxis,
    CartesianGrid,
    Tooltip,
    ResponsiveContainer,
+   ComposedChart,
+   Line,
 } from 'recharts';
 import { useFetch } from '../../utils/hooks';
 
@@ -51,7 +52,7 @@ function Activity({ userId }) {
                </div>
             </div>
             <ResponsiveContainer width="100%">
-               <BarChart
+               <ComposedChart
                   margin={{ top: 100, right: 20, left: 40 }}
                   data={activityData}
                   barGap={8}
@@ -71,8 +72,8 @@ function Activity({ userId }) {
                      height={60}
                      stroke="#DEDEDE"
                      strokeWidth={1}
-                     // padding={{ left: 10, right: 10 }}
-                     // scale="point"
+                     padding={{ left: 10, right: 10 }}
+                     scale="point"
                   />
                   <YAxis
                      dataKey="kilogram"
@@ -99,16 +100,14 @@ function Activity({ userId }) {
                   />
                   <Tooltip
                      content={<CustomTooltip />}
-                     cursor={{ fill: '#C4C4C4', opacity: '50%' }}
-                     offset={50}
+                     cursor={{
+                        strokeWidth: 56,
+                        stroke: '#C4C4C4',
+                        opacity: '50%',
+                     }}
+                     offset={35}
+                     position={{ y: 70 }}
                   />
-                  {/* <Legend
-                     verticalAlign="top"
-                     align="right"
-                     iconType="circle"
-                     iconSize="8"
-                     height={60}
-                  /> */}
                   <Bar
                      //name="Poids (kg)"
                      dataKey="kilogram"
@@ -123,7 +122,13 @@ function Activity({ userId }) {
                      fill="var(--primary)"
                      radius={[5, 5, 0, 0]}
                   />
-               </BarChart>
+                  <Line
+                     type="monotone"
+                     dataKey="calories"
+                     yAxisId="calories"
+                     hide
+                  />
+               </ComposedChart>
             </ResponsiveContainer>
          </div>
       );

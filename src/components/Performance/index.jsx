@@ -61,7 +61,6 @@ function Performance({ userId }) {
             </ResponsiveContainer>
          </div>
       );
-      /* return <div className="performance-container">Performance</div>; */
    }
 }
 

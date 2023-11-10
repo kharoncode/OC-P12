@@ -40,6 +40,7 @@ function AverageSessions({ userId }) {
 
          return null;
       };
+
       return (
          <div className="averageSessions-container center">
             <h3 className="averageSessions-info">Durée moyenne des sessions</h3>
@@ -71,7 +72,13 @@ function AverageSessions({ userId }) {
                   />
                   <Tooltip
                      content={<CustomTooltip />}
-                     cursor={{ opacity: '0%' }}
+                     //cursor={{fill:"black",opacity:"50%"}}
+                     cursor={{
+                        strokeWidth: '50%',
+                        stroke: 'black',
+                        opacity: '10%',
+                        scale: 10,
+                     }}
                   />
                   <YAxis
                      hide
