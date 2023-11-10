@@ -11,13 +11,16 @@ import {
 
 function AverageSessions({ userId }) {
    const { isLoading, data, error } = useFetch(
-      `http://localhost:3001/user/${userId}/average-sessions`
+      `http://localhost:3001/user/${userId}/average-sessions`,
+      `../mocks/user_averageSession.json`,
+      userId
    );
+
    if (error) {
       return <div>Oups ... il y a une erreure !</div>;
    }
    if (!isLoading) {
-      const averageSessions = data.data.sessions;
+      const averageSessions = data.sessions;
       const dayLetter = {
          1: 'L',
          2: 'M',
@@ -71,10 +74,10 @@ function AverageSessions({ userId }) {
                      }}
                   />
                   <Tooltip
+                     //position={{ y: 0 }}
                      content={<CustomTooltip />}
-                     //cursor={{fill:"black",opacity:"50%"}}
                      cursor={{
-                        strokeWidth: '50%',
+                        strokeWidth: '20%',
                         stroke: 'black',
                         opacity: '10%',
                         scale: 10,
@@ -91,6 +94,12 @@ function AverageSessions({ userId }) {
                      stroke="url(#colorSl)"
                      strokeWidth={2}
                      dot={false}
+                     activeDot={{
+                        stroke: '#FFFFFF33',
+                        strokeWidth: 5,
+                        r: 4,
+                        fill: 'white',
+                     }}
                   />
                </LineChart>
             </ResponsiveContainer>

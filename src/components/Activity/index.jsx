@@ -13,13 +13,15 @@ import { useFetch } from '../../utils/hooks';
 
 function Activity({ userId }) {
    const { isLoading, data, error } = useFetch(
-      `http://localhost:3001/user/${userId}/activity`
+      `http://localhost:3001/user/${userId}/activity`,
+      `../mocks/user_activity.json`,
+      userId
    );
    if (error) {
       return <div>Oups ... il y a une erreure !</div>;
    }
    if (!isLoading) {
-      const activityData = data.data.sessions;
+      const activityData = data.sessions;
 
       const CustomTooltip = ({ active, payload, label }) => {
          if (active && payload && payload.length) {

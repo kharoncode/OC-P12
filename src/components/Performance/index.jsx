@@ -10,7 +10,9 @@ import {
 
 function Performance({ userId }) {
    const { isLoading, data, error } = useFetch(
-      `http://localhost:3001/user/${userId}/performance`
+      `http://localhost:3001/user/${userId}/performance`,
+      `../mocks/user_performance.json`,
+      userId
    );
    if (error) {
       return <div>Oups ... il y a une erreure !</div>;
@@ -24,7 +26,7 @@ function Performance({ userId }) {
          5: 'Vitesse',
          6: 'Intensité',
       };
-      const performance = data.data.data;
+      const performance = data.data;
 
       return (
          <div className="performance-container center">
