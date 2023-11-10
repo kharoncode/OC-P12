@@ -1,5 +1,6 @@
 .activity-container {
    position: relative;
+   height: 320px;
    background-color: #fbfbfb;
 }
 

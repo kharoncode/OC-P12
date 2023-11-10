@@ -30,27 +30,27 @@
    font-weight: 500;
 }
 
-.stats-container {
+.stats-grid {
    grid-row: 2 / span 2;
    grid-column: 4;
 }
 
-.activity-container {
+.activity-grid {
    grid-row: 2;
    grid-column: 1 / span 3;
 }
 
-.averageSessions-container {
+.averageSessions-grid {
    grid-row: 3;
    grid-column: 1;
 }
 
-.performance-container {
+.performance-grid {
    grid-row: 3;
    grid-column: 2;
 }
 
-.score-container {
+.score-grid {
    grid-row: 3;
    grid-column: 3;
 }

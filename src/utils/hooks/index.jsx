@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 
 export function useFetch(urlApi, urlMock, userId) {
+   const isMocked = true;
+
    const [data, setData] = useState({});
    const [isLoading, setLoading] = useState(true);
    const [error, setError] = useState(null);
-   const isMocked = true;
-   let url = '';
-   const id = Number.parseInt(userId);
 
+   let url = '';
    if (isMocked) {
       url = urlMock;
    } else {
@@ -25,7 +25,9 @@ export function useFetch(urlApi, urlMock, userId) {
             const data = await response.json();
             setData(
                isMocked
-                  ? data.find((el) => (el.id || el.userId) === id)
+                  ? data.find(
+                       (el) => (el.id || el.userId) === Number.parseInt(userId)
+                    )
                   : data.data
             );
          } catch (err) {
@@ -36,7 +38,7 @@ export function useFetch(urlApi, urlMock, userId) {
          }
       }
       fetchData();
-   }, [url, isMocked, id]);
+   }, [url, isMocked, userId]);
 
    return { isLoading, data, error };
 }

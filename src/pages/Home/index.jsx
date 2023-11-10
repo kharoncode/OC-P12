@@ -30,11 +30,21 @@ function Home({ isMockedData }) {
                      Félicitations ! Vous avez explosé vos objectifs hier 👏
                   </div>
                </div>
-               <Stats stats={user.keyData} />
-               <Activity userId={userId} />
-               <AverageSession userId={userId} />
-               <Performance userId={userId} />
-               <Score score={user.score ? user.score : user.todayScore} />
+               <div className="stats-grid">
+                  <Stats stats={user.keyData} />
+               </div>
+               <div className="activity-grid">
+                  <Activity userId={userId} />
+               </div>
+               <div className="averageSessions-grid">
+                  <AverageSession userId={userId} />
+               </div>
+               <div className="performance-grid">
+                  <Performance userId={userId} />
+               </div>
+               <div className="score-grid">
+                  <Score score={user.score ? user.score : user.todayScore} />
+               </div>
             </div>
          );
       } else {
