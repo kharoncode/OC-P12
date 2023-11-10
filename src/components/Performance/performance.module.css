@@ -1,4 +1,7 @@
-.performance-container {
+.container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
    background-color: #282d30;
    box-shadow: 0px 2px 4px 0px #00000005;
    border-radius: 5px;

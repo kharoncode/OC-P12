@@ -1,4 +1,4 @@
-import './performance.css';
+import styles from './performance.module.css';
 import { useFetch } from '../../utils/hooks';
 import {
    Radar,
@@ -29,7 +29,7 @@ function Performance({ userId }) {
       const performance = data.data;
 
       return (
-         <div className="performance-container center">
+         <div className={styles.container}>
             <ResponsiveContainer minWidth={275} width="99%" height="100%">
                <RadarChart
                   cx="50%"

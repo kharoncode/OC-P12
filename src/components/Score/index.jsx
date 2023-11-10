@@ -1,4 +1,4 @@
-import './score.css';
+import styles from './score.module.css';
 import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts';
 
 function Score({ score }) {
@@ -15,11 +15,11 @@ function Score({ score }) {
       },
    ];
    return (
-      <div className="score-container center">
-         <div className="score-title">Score</div>
-         <div className="score-info">
-            <div className="score-info--result">{score * 100}%</div>
-            <div className="score-info--text">de votre objectif</div>
+      <div className={styles.container}>
+         <div className={styles.title}>Score</div>
+         <div className={styles.info}>
+            <div className={styles.infoResult}>{score * 100}%</div>
+            <div className={styles.infoText}>de votre objectif</div>
          </div>
          <ResponsiveContainer minWidth={260} width="99%" height={240}>
             <RadialBarChart

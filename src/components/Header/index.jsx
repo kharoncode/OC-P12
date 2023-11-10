@@ -1,24 +1,24 @@
 import logo from '../../assets/logo.svg';
-import './header.css';
+import styles from './header.module.css';
 import { Link } from 'react-router-dom';
 
 function Header({ userId }) {
    return (
-      <header>
-         <Link to={`/`} className="logo">
+      <header className={styles.container}>
+         <Link to={`/`} className={styles.logo}>
             <img src={logo} alt="Logo de SportSee" />
-            <span>SportSee</span>
+            <span className={styles.title}>SportSee</span>
          </Link>
-         <Link to={`/${userId}/`} className="link">
+         <Link to={`/${userId}/`} className={styles.link}>
             Accueil
          </Link>
-         <Link to={`/${userId}/profil`} className="link">
+         <Link to={`/${userId}/profil`} className={styles.link}>
             Profil
          </Link>
-         <Link to={`/${userId}/settings`} className="link">
+         <Link to={`/${userId}/settings`} className={styles.link}>
             Réglages
          </Link>
-         <Link to={`/${userId}/community`} className="link">
+         <Link to={`/${userId}/community`} className={styles.link}>
             Communauté
          </Link>
       </header>

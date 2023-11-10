@@ -1,4 +1,4 @@
-.averageSessions-container {
+.container {
    position: relative;
    width: 100%;
    background: #ff0000;
@@ -8,7 +8,7 @@
    width: 100%;
 }
 
-.averageSessions-info {
+.info {
    position: absolute;
    width: 150px;
    height: 50px;
@@ -20,7 +20,7 @@
    opacity: 60%;
 }
 
-.custom-tooltip-averageSessions {
+.customTooltip {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -29,7 +29,7 @@
    background: var(--tertiary);
 }
 
-.custom-tooltip-averageSessions-label {
+.customTooltipLabel {
    font-size: 0.5em;
    font-weight: 500;
    color: var(--secondary);

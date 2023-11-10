@@ -1,4 +1,4 @@
-import './activity.css';
+import styles from './activity.module.css';
 import {
    Bar,
    XAxis,
@@ -23,14 +23,14 @@ function Activity({ userId }) {
    if (!isLoading) {
       const activityData = data.sessions;
 
-      const CustomTooltip = ({ active, payload, label }) => {
+      const CustomTooltip = ({ active, payload }) => {
          if (active && payload && payload.length) {
             return (
-               <div className="custom-tooltip-activity">
-                  <p className="custom-tooltip-activity-label">
+               <div className={styles.cutomTooltip}>
+                  <p className={styles.cutomTooltipLabel}>
                      {`${payload[0].value}`}kg
                   </p>
-                  <p className="custom-tooltip-activity-label">
+                  <p className={styles.cutomTooltipLabel}>
                      {`${payload[1].value}`}Kcal
                   </p>
                </div>
@@ -41,16 +41,16 @@ function Activity({ userId }) {
       };
 
       return (
-         <div className="activity-container center">
-            <h3 className="activity-title">Activité quotidienne</h3>
-            <div className="legend">
-               <div className="legend-item">
-                  <div className="weight-circle circle"></div>
-                  <p>Poids (kg)</p>
+         <div className={styles.container}>
+            <h3 className={styles.title}>Activité quotidienne</h3>
+            <div className={styles.legend}>
+               <div className={styles.legendItem}>
+                  <div className={`${styles.weight} ${styles.circle}`}></div>
+                  <p className={styles.legendName}>Poids (kg)</p>
                </div>
-               <div className="legend-item">
-                  <div className="calorie-circle circle"></div>
-                  <p>Calories brûlées (kCal)</p>
+               <div className={styles.legendItem}>
+                  <div className={`${styles.calorie} ${styles.circle}`}></div>
+                  <p className={styles.legendName}>Calories brûlées (kCal)</p>
                </div>
             </div>
             <ResponsiveContainer width="100%">

@@ -1,4 +1,7 @@
-.score-container {
+.container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
    position: relative;
    background-color: #fafafa;
    box-shadow: 0px 2px 4px 0px #00000005;
@@ -6,7 +9,7 @@
    height: 263px;
 }
 
-.score-title {
+.title {
    position: absolute;
    top: 25px;
    left: 30px;
@@ -14,7 +17,7 @@
    font-weight: 500;
 }
 
-.score-info {
+.info {
    position: absolute;
    display: flex;
    justify-content: center;
@@ -26,13 +29,13 @@
    height: 150px;
 }
 
-.score-info--result {
+.infoResult {
    font-size: 1.625em;
    font-weight: 700;
    color: #282d30;
 }
 
-.score-info--text {
+.infoText {
    text-align: center;
    width: 50%;
    font-weight: 500;

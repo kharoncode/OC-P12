@@ -1,10 +1,13 @@
-.activity-container {
+.container {
    position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    height: 320px;
    background-color: #fbfbfb;
 }
 
-.activity-title {
+.title {
    position: absolute;
    top: 25px;
    left: 30px;
@@ -20,13 +23,13 @@
    gap: 30px;
 }
 
-.legend-item {
+.legendItem {
    display: flex;
    align-items: center;
    gap: 10px;
 }
 
-.legend-item p {
+.legendName {
    color: #74798c;
    font-size: 0.875em;
    font-weight: 500;
@@ -38,15 +41,15 @@
    border-radius: 50%;
 }
 
-.weight-circle {
+.weight {
    background: #282d30;
 }
 
-.calorie-circle {
+.calorie {
    background: var(--primary);
 }
 
-.custom-tooltip-activity {
+.cutomTooltip {
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -57,7 +60,7 @@
    background: var(--primary);
 }
 
-.custom-tooltip-activity-label {
+.cutomTooltipLabel {
    font-size: 0.4375em;
    font-weight: 500;
    color: var(--tertiary);

@@ -1,4 +1,4 @@
-import './stats.css';
+import styles from './stats.module.css';
 import caloriesImg from '../../assets/stats/calories.svg';
 import proteinImg from '../../assets/stats/proteines.svg';
 import glucidesImg from '../../assets/stats/glucides.svg';
@@ -7,7 +7,7 @@ import StatsItem from '../StatsItem';
 
 function Stats({ stats }) {
    return (
-      <div className="stats-container">
+      <div className={styles.container}>
          <StatsItem
             name="Calories"
             value={stats.calorieCount}

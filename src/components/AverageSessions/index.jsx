@@ -1,4 +1,4 @@
-import './averageSessions.css';
+import styles from './averageSessions.module.css';
 import { useFetch } from '../../utils/hooks';
 import {
    LineChart,
@@ -33,8 +33,8 @@ function AverageSessions({ userId }) {
       const CustomTooltip = ({ active, payload }) => {
          if (active && payload && payload.length) {
             return (
-               <div className="custom-tooltip-averageSessions">
-                  <p className="custom-tooltip-averageSessions-label">
+               <div className={styles.customTooltip}>
+                  <p className={styles.customTooltipLabel}>
                      {`${payload[0].value}`} min
                   </p>
                </div>
@@ -45,8 +45,8 @@ function AverageSessions({ userId }) {
       };
 
       return (
-         <div className="averageSessions-container center">
-            <h3 className="averageSessions-info">Durée moyenne des sessions</h3>
+         <div className={styles.container}>
+            <h3 className={styles.info}>Durée moyenne des sessions</h3>
             <ResponsiveContainer minWidth={260} width="99%" height={240}>
                <LineChart data={averageSessions} margin={{ top: 60 }}>
                   <defs>

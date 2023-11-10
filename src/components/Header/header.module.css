@@ -1,4 +1,4 @@
-header {
+.container {
    position: fixed;
    top: 0;
    padding: 0 90px 0 30px;
@@ -13,20 +13,20 @@ header {
    z-index: 100;
 }
 
-header .logo {
+.logo {
    display: flex;
    justify-content: space-between;
    align-items: center;
    gap: 10px;
 }
 
-header .logo span {
+.title {
    color: var(--primary);
    font-size: 1.5em;
    font-weight: 500;
 }
 
-header .link {
+.link {
    font-size: 1.5em;
    font-weight: 500;
    color: var(--tertiary);
