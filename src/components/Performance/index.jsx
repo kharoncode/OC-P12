@@ -6,6 +6,7 @@ import {
    PolarGrid,
    PolarAngleAxis,
    ResponsiveContainer,
+   PolarRadiusAxis,
 } from 'recharts';
 
 function Performance({ userId }) {
@@ -42,6 +43,11 @@ function Performance({ userId }) {
                   endAngle={-330}
                >
                   <PolarGrid radialLines={false} />
+                  <PolarRadiusAxis
+                     stroke="transparent"
+                     type="number"
+                     domain={[0, 'dataMax + 20']}
+                  />
                   <PolarAngleAxis
                      dataKey="kind"
                      tickFormatter={(kind) => category[kind]}
