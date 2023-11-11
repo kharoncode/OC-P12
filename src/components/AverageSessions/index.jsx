@@ -44,11 +44,33 @@ function AverageSessions({ userId }) {
          return null;
       };
 
+      const CustomCursor = (e) => {
+         const shadow_elt = document.getElementsByClassName(styles.shadow);
+         const { chartX, activeTooltipIndex } = e;
+         const shadowWidth = shadow_elt[0].clientWidth;
+         const stop = (chartX / shadowWidth) * 100;
+         shadow_elt[0].style.display = 'initial';
+         shadow_elt[0].style.backgroundImage = `linear-gradient(90deg, rgba(250, 250, 250, 0) ${stop}%, rgba(0, 0, 0, .2) ${stop}%, rgba(0, 0, 0, .2) 100%)`;
+         console.log(activeTooltipIndex);
+      };
+
       return (
          <div className={styles.container}>
+            <div className={styles.shadow}></div>
             <h3 className={styles.info}>Durée moyenne des sessions</h3>
-            <ResponsiveContainer minWidth={260} width="99%" height={240}>
-               <LineChart data={averageSessions} margin={{ top: 60 }}>
+            <ResponsiveContainer minWidth={260} width="99%" height="100%">
+               <LineChart
+                  data={averageSessions}
+                  margin={{ top: 60 }}
+                  onMouseMove={(e) => {
+                     CustomCursor(e);
+                  }}
+                  onMouseLeave={() => {
+                     document.getElementsByClassName(
+                        styles.shadow
+                     )[0].style.display = 'none';
+                  }}
+               >
                   <defs>
                      <linearGradient
                         id="colorSl"
@@ -73,16 +95,7 @@ function AverageSessions({ userId }) {
                         opacity: '60%',
                      }}
                   />
-                  <Tooltip
-                     //position={{ y: 0 }}
-                     content={<CustomTooltip />}
-                     cursor={{
-                        strokeWidth: '20%',
-                        stroke: 'black',
-                        opacity: '10%',
-                        scale: 10,
-                     }}
-                  />
+                  <Tooltip content={<CustomTooltip />} cursor={false} />
                   <YAxis
                      hide
                      type="number"
