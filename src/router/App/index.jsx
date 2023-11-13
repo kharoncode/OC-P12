@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
+import Nav from '../../components/Nav';
+import Header from '../../components/Header';
 import Users from '../../pages/Users';
-import Header from '../Header';
-import Nav from '../Nav';
 import Home from '../../pages/Home';
 import Dev from '../../pages/Dev';
 
@@ -19,7 +19,7 @@ function App() {
                <Route path="/:userId/profil" element={<Home />} />
                <Route path="/:userId/settings" element={<Home />} />
                <Route path="/:userId/community" element={<Home />} />
-               <Route path="/user/:userId/:category" element={<Dev />} />
+               <Route path="/user/:userId/:category?" element={<Dev />} />
             </Routes>
          </main>
       </Router>
