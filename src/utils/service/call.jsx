@@ -10,8 +10,7 @@ function selectUserMockedData(data, userId) {
    return data.find((el) => (el.id || el.userId) === Number.parseInt(userId));
 }
 
-export function useMultiFetch(userId) {
-   const isMocked = true;
+export function useFetch(userId, isMocked) {
    const [data, setData] = useState({});
    const [isLoading, setLoading] = useState(true);
    const [error, setError] = useState(null);

@@ -7,18 +7,21 @@ import Home from '../../pages/Home';
 import Dev from '../../pages/Dev';
 
 function App() {
-   const [userId, setUserId] = useState(0);
+   const [userId, setUserId] = useState(12);
+   const [isMocked, setIsMocked] = useState(true);
    return (
       <Router>
          <Nav userId={`${userId}`} />
          <Header userId={`${userId}`} />
          <main>
             <Routes>
-               <Route path="/" element={<Users setUserId={setUserId} />} />
-               <Route path="/:userId/" element={<Home />} />
-               <Route path="/:userId/profil" element={<Home />} />
-               <Route path="/:userId/settings" element={<Home />} />
-               <Route path="/:userId/community" element={<Home />} />
+               <Route
+                  path="/"
+                  element={
+                     <Users setUserId={setUserId} setIsMocked={setIsMocked} />
+                  }
+               />
+               <Route path="/:userId/" element={<Home isMocked={isMocked} />} />
                <Route path="/user/:userId/:category?" element={<Dev />} />
             </Routes>
          </main>

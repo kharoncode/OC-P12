@@ -12,13 +12,13 @@ function Header({ userId }) {
          <Link to={`/${userId}/`} className={styles.link}>
             Accueil
          </Link>
-         <Link to={`/${userId}/profil`} className={styles.link}>
+         <Link to={`/${userId}/`} className={styles.link}>
             Profil
          </Link>
-         <Link to={`/${userId}/settings`} className={styles.link}>
+         <Link to={`/${userId}/`} className={styles.link}>
             Réglages
          </Link>
-         <Link to={`/${userId}/community`} className={styles.link}>
+         <Link to={`/${userId}/`} className={styles.link}>
             Communauté
          </Link>
       </header>

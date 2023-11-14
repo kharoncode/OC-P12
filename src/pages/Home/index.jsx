@@ -5,21 +5,24 @@ import AverageSession from '../../components/AverageSessions';
 import Performance from '../../components/Performance';
 import Score from '../../components/Score';
 import Stats from '../../components/Stats';
-import { useMultiFetch } from '../../utils/service/call';
+import formatData from '../../utils/service/format';
+import { useFetch } from '../../utils/service/call';
 
-function Home() {
+function Home({ isMocked }) {
    const { userId } = useParams();
-
-   const { isLoading, data, error } = useMultiFetch(userId);
+   const { isLoading, data, error } = useFetch(userId, isMocked);
 
    if (error) {
       return <div>Oups ... il y a une erreur !</div>;
    }
    if (!isLoading) {
-      const user = data.mainData;
-      const activity = data.activityData;
-      const averageSessions = data.averageSessionsData;
-      const performance = data.performanceData;
+      const user = formatData(data.mainData, 'main');
+      const activity = formatData(data.activityData.sessions, 'activity');
+      const averageSessions = formatData(
+         data.averageSessionsData.sessions,
+         'averageSessions'
+      );
+      const performance = formatData(data.performanceData.data, 'performance');
       if (user !== undefined) {
          return (
             <div className="dashboard">
@@ -44,7 +47,7 @@ function Home() {
                   <Performance data={performance} />
                </div>
                <div className="score-grid">
-                  <Score score={user.score ? user.score : user.todayScore} />
+                  <Score score={user.score} />
                </div>
             </div>
          );

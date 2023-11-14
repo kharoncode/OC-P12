@@ -9,23 +9,13 @@ import {
 } from 'recharts';
 
 function Performance({ data }) {
-   const category = {
-      1: 'Cardio',
-      2: 'Energie',
-      3: 'Endurance',
-      4: 'Force',
-      5: 'Vitesse',
-      6: 'Intensité',
-   };
-   const performance = data.data;
-
    return (
       <div className={styles.container}>
          <ResponsiveContainer minWidth={275} width="99%" height="100%">
             <RadarChart
                cx="50%"
                cy="50%"
-               data={performance}
+               data={data}
                startAngle={30}
                endAngle={-330}
             >
@@ -37,7 +27,6 @@ function Performance({ data }) {
                />
                <PolarAngleAxis
                   dataKey="kind"
-                  tickFormatter={(kind) => category[kind]}
                   dy={3}
                   tick={{
                      fill: 'var(--tertiary)',

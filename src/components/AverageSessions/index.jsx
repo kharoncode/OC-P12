@@ -9,16 +9,6 @@ import {
 } from 'recharts';
 
 function AverageSessions({ data }) {
-   const averageSessions = data.sessions;
-   const dayLetter = {
-      1: 'L',
-      2: 'M',
-      3: 'M',
-      4: 'J',
-      5: 'V',
-      6: 'S',
-      7: 'D',
-   };
    const CustomTooltip = ({ active, payload }) => {
       if (active && payload && payload.length) {
          return (
@@ -48,7 +38,7 @@ function AverageSessions({ data }) {
          <h3 className={styles.info}>Durée moyenne des sessions</h3>
          <ResponsiveContainer minWidth={260} width="99%" height="100%">
             <LineChart
-               data={averageSessions}
+               data={data}
                margin={{ top: 60 }}
                onMouseMove={(e) => {
                   CustomCursor(e);
@@ -73,7 +63,6 @@ function AverageSessions({ data }) {
                </defs>
                <XAxis
                   dataKey="day"
-                  tickFormatter={(day) => dayLetter[day]}
                   padding={{ left: 10, right: 10 }}
                   stroke="transparente"
                   tick={{

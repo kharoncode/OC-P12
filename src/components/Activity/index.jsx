@@ -11,8 +11,6 @@ import {
 } from 'recharts';
 
 function Activity({ data }) {
-   const activityData = data.sessions;
-
    const CustomTooltip = ({ active, payload }) => {
       if (active && payload && payload.length) {
          return (
@@ -46,7 +44,7 @@ function Activity({ data }) {
          <ResponsiveContainer width="100%">
             <ComposedChart
                margin={{ top: 100, right: 20, left: 40 }}
-               data={activityData}
+               data={data}
                barGap={8}
                barSize={7}
             >
@@ -60,7 +58,6 @@ function Activity({ data }) {
                      fontSize: '0.875em',
                      fontWeight: 500,
                   }}
-                  tickFormatter={(day) => new Date(day).getDate()}
                   height={60}
                   stroke="#DEDEDE"
                   strokeWidth={1}
@@ -101,14 +98,12 @@ function Activity({ data }) {
                   position={{ y: 70 }}
                />
                <Bar
-                  //name="Poids (kg)"
                   dataKey="kilogram"
                   yAxisId="kilogram"
                   fill="#282D30"
                   radius={[5, 5, 0, 0]}
                />
                <Bar
-                  //name="Calories brûlées (kCal)"
                   dataKey="calories"
                   yAxisId="calories"
                   fill="var(--primary)"
