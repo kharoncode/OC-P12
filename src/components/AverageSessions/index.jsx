@@ -8,6 +8,12 @@ import {
    ResponsiveContainer,
 } from 'recharts';
 
+/**
+ * Average exercise duration curve
+ * @component
+ * @param { Array.<Object> } data
+ */
+
 function AverageSessions({ data }) {
    const CustomTooltip = ({ active, payload }) => {
       if (active && payload && payload.length) {

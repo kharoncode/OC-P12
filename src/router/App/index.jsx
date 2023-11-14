@@ -6,6 +6,10 @@ import Users from '../../pages/Users';
 import Home from '../../pages/Home';
 import Dev from '../../pages/Dev';
 
+/**
+ * Router
+ */
+
 function App() {
    const [userId, setUserId] = useState(12);
    const [isMocked, setIsMocked] = useState(true);

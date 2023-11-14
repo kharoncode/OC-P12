@@ -8,6 +8,16 @@ import Stats from '../../components/Stats';
 import formatData from '../../utils/service/format';
 import { useFetch } from '../../utils/service/call';
 
+/**
+ * Display the Dashboard
+ * @param { Boolean } isMocked used by useFetch to know which data to load
+ *
+ * @param { Number } userID from useParams
+ * @param { Boolean } isLoading from the Hook useFetch : informs you when the api call has ended
+ * @param { Object.<Object> } data from the Hook useFetch : all the user data
+ * @param { Boolean } error from the Hook useFetch : informs you when there is an error
+ */
+
 function Home({ isMocked }) {
    const { userId } = useParams();
    const { isLoading, data, error } = useFetch(userId, isMocked);

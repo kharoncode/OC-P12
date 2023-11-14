@@ -10,6 +10,12 @@ import {
    Line,
 } from 'recharts';
 
+/**
+ * Daily activities table
+ * @component
+ * @param { Array.<Object> } data
+ */
+
 function Activity({ data }) {
    const CustomTooltip = ({ active, payload }) => {
       if (active && payload && payload.length) {

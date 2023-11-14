@@ -1,6 +1,11 @@
 import './users.css';
-
 import { Link } from 'react-router-dom';
+
+/**
+ * User selection interface
+ * @param { Function } setUserId
+ * @param { Function } setIsMocked
+ */
 
 function Users({ setUserId, setIsMocked }) {
    return (

@@ -1,6 +1,12 @@
 import styles from './score.module.css';
 import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts';
 
+/**
+ * Presentation of the score with a pie chart
+ * @component
+ * @param { number } score
+ */
+
 function Score({ score }) {
    const data = [
       {

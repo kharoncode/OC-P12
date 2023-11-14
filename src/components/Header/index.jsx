@@ -2,6 +2,12 @@ import logo from '../../assets/logo.svg';
 import styles from './header.module.css';
 import { Link } from 'react-router-dom';
 
+/**
+ * Header
+ * @component
+ * @param { Number } userId
+ */
+
 function Header({ userId }) {
    return (
       <header className={styles.container}>

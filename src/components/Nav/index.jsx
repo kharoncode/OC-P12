@@ -5,6 +5,12 @@ import swim from '../../assets/nav/swim.svg';
 import bike from '../../assets/nav/bike.svg';
 import fitness from '../../assets/nav/fitness.svg';
 
+/**
+ * Navigation bar
+ * @component
+ * @param { Number } userId
+ */
+
 function Nav({ userId }) {
    return (
       <nav className={styles.container}>

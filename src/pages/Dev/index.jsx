@@ -1,5 +1,9 @@
 import { useParams } from 'react-router-dom';
 
+/**
+ * Redirects to json data
+ */
+
 function Dev() {
    const { userId, category } = useParams();
    window.location.replace(

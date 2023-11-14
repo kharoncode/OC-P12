@@ -1,14 +1,35 @@
 import { useState, useEffect } from 'react';
 
+/**
+ * Get data with fetch
+ * @param { String } url
+ * @return { Promise }
+ */
+
 async function fetchData(url) {
    const response = await fetch(url);
    const data = await response.json();
    return await data;
 }
 
+/**
+ * Selects the Mocked data according to the user
+ * @param { Array.<Object> } data
+ * @param { number } userId
+ * @return { Array.<Object> }
+ */
 function selectUserMockedData(data, userId) {
    return data.find((el) => (el.id || el.userId) === Number.parseInt(userId));
 }
+
+/**
+ * Use Fetch to get all the data
+ * @param { Number } userId
+ * @param { Boolean } isMocked
+ * @return { Boolean } isLoading
+ * @return { Object.<Array | Object> } data
+ * @return { Boolean } error
+ */
 
 export function useFetch(userId, isMocked) {
    const [data, setData] = useState({});

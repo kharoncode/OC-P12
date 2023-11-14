@@ -8,6 +8,12 @@ import {
    PolarRadiusAxis,
 } from 'recharts';
 
+/**
+ * Performance graph
+ * @component
+ * @param { Object } data
+ */
+
 function Performance({ data }) {
    return (
       <div className={styles.container}>

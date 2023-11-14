@@ -5,6 +5,17 @@ import glucidesImg from '../../assets/stats/glucides.svg';
 import lipidesImg from '../../assets/stats/lipides.svg';
 import StatsItem from '../StatsItem';
 
+/**
+ * Key information table
+ * @component
+ * @param { Object } stats
+ * @param { Number } stats.calorieCount
+ * @param { Number } stats.proteinCount
+ * @param { Number } stats.carbohydrateCount
+ * @param { Number } stats.lipidCount
+ * @return {ReactElement}
+ */
+
 function Stats({ stats }) {
    return (
       <div className={styles.container}>

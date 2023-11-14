@@ -1,3 +1,10 @@
+/**
+ * Calls the function that formats data according to its category
+ * @param { Object | Array.<Object> } data
+ * @param { String } category
+ * @return { Object | Array.<Object> }
+ */
+
 export default function formatData(data, category) {
    switch (category) {
       case 'main':
@@ -13,6 +20,12 @@ export default function formatData(data, category) {
    }
 }
 
+/**
+ * Format User information
+ * @param { Object } data
+ * @return { Object }
+ */
+
 function mainFormat(data) {
    const mainData = {
       userInfos: data.userInfos,
@@ -21,6 +34,12 @@ function mainFormat(data) {
    };
    return mainData;
 }
+
+/**
+ * Format Activity data
+ * @param { Array.<Object> } data
+ * @return { Array.<Object> }
+ */
 
 function activityFormat(data) {
    const activityData = [];
@@ -33,6 +52,12 @@ function activityFormat(data) {
    );
    return activityData;
 }
+
+/**
+ * Format Average Sessions data
+ * @param { Array.<Object> } data
+ * @return { Array.<Object> }
+ */
 
 function averageSessionsFormat(data) {
    const dayLetter = {
@@ -53,6 +78,12 @@ function averageSessionsFormat(data) {
    );
    return averageSessionsdata;
 }
+
+/**
+ * Format Performance data
+ * @param { Array.<Object> } data
+ * @return { Array.<Object> }
+ */
 
 function performanceFormat(data) {
    const category = {
