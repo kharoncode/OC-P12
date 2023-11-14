@@ -33,8 +33,7 @@ This repository contains the Front-End Dashboard of the Sportsee application.
 
 -  Install dependencies
 
-   `npm install react-router-dom`
-   `npm install recharts`
+   `npm install react-router-dom recharts`
 
 -  Run the project (Port 3001)
 
