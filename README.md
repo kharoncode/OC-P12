@@ -8,8 +8,8 @@ This repository contains the Front-End Dashboard of the Sportsee application.
 
 ### 2.1 Prerequisites
 
--  [Yarn]
--  [Git]
+-  [Yarn](https://yarnpkg.com/)
+-  [Git](https://git-scm.com/)
 
 ### 2.2 Dependencies
 
@@ -20,12 +20,19 @@ This repository contains the Front-End Dashboard of the Sportsee application.
 ### 2.2 Launching the project
 
 -  Clone the repository
+
    `https://github.com/kharoncode/OC-P12.git`
+
 -  Move to the folder
+
    `cd OC-P12`
+
 -  Install the package
+
    `yarn`
+
 -  Run the project (Port 3001)
+
    `yarn start`
 
 ## 3. BackEnd
@@ -38,12 +45,19 @@ This repository contains the Front-End Dashboard of the Sportsee application.
 ### 2.2 Lauching the BackEnd
 
 -  Clone the repository
+
    `https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git`
+
 -  Move to the folder
+
    `cd P9-front-end-dashboard`
+
 -  Install the package
+
    `yarn`
+
 -  Run the micro API (Port 3000)
+
    `yarn dev`
 
 ## 4. Endpoints
