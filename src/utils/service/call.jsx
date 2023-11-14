@@ -23,10 +23,10 @@ export function useFetch(userId, isMocked) {
          performance: `../mocks/user_performance.json`,
       };
       const urlApi = {
-         main: `http://localhost:3001/user/${userId}`,
-         activity: `http://localhost:3001/user/${userId}/activity`,
-         averageSessions: `http://localhost:3001/user/${userId}/average-sessions`,
-         performance: `http://localhost:3001/user/${userId}/performance`,
+         main: `http://localhost:3000/user/${userId}`,
+         activity: `http://localhost:3000/user/${userId}/activity`,
+         averageSessions: `http://localhost:3000/user/${userId}/average-sessions`,
+         performance: `http://localhost:3000/user/${userId}/performance`,
       };
       const url = isMocked ? urlMock : urlApi;
 
