@@ -1,4 +1,4 @@
-# Sportsee
+# <img src="public/logo.png" width="200"/>
 
 ## 1. General information
 
@@ -40,7 +40,8 @@ This repository contains the Front-End Dashboard of the Sportsee application.
 ### 2.1 Prerequisites
 
 -  [NodeJS (**version 12.18**)]
-   If you are working with several versions of NodeJS, we recommend you install [nvm](https://github.com/nvm-sh/nvm). This tool will allow you to easily manage your NodeJS versions.
+
+If you are working with several versions of NodeJS, we recommend you install [nvm](https://github.com/nvm-sh/nvm). This tool will allow you to easily manage your NodeJS versions.
 
 ### 2.2 Lauching the BackEnd
 
