@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 /**
  * Get data with fetch
  * @param { String } url
- * @return { Promise }
+ * @return { Object }
  */
 
 async function fetchData(url) {
